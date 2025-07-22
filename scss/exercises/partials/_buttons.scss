@@ -1,0 +1,65 @@
+// Button Components - All button styles in one place
+// Uses variables and mixins from other partials
+
+// ==========================================
+// BASE BUTTON CLASS
+// ==========================================
+.btn {
+  // TODO: Use your btn-base mixin
+  // @include btn-base;
+}
+
+// ==========================================
+// BUTTON VARIANTS
+// ==========================================
+.btn-primary {
+  // TODO: Use your btn-style mixin with primary color
+  // @include btn-style($primary-color);
+}
+
+.btn-secondary {
+  // TODO: Use your btn-style mixin with secondary color
+  // @include btn-style($secondary-color);
+}
+
+.btn-outline {
+  // TODO: Create outline button style
+  // @include btn-base;
+  // background: transparent;
+  // border: 2px solid $primary-color;
+  // color: $primary-color;
+  
+  // &:hover {
+  //   background: $primary-color;
+  //   color: white;
+  // }
+}
+
+// ==========================================
+// BUTTON SIZES
+// ==========================================
+.btn-small {
+  // TODO: Use your btn-size mixin
+  // @include btn-size(small);
+}
+
+.btn-large {
+  // TODO: Use your btn-size mixin
+  // @include btn-size(large);
+}
+
+// ==========================================
+// BUTTON STATES
+// ==========================================
+.btn:disabled {
+  // TODO: Style disabled state
+  // opacity: 0.6;
+  // cursor: not-allowed;
+  // 
+  // &:hover {
+  //   transform: none;
+  // }
+}
+
+// This file focuses ONLY on buttons
+// Clean, organized, easy to maintain!

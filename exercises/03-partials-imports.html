@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3: Partials & Imports - Organized Candy Store</title>
+    <link rel="stylesheet" href="../css/exercises.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            min-height: 100vh;
+        }
+        .exercise-header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="exercise-header">
+        <h1>📁 Exercise 3: Partials & Imports</h1>
+        <p><strong>Goal:</strong> Organize your SASS into logical, maintainable files</p>
+        <p><strong>Files to create:</strong> Multiple files in <code>scss/exercises/partials/</code></p>
+        <p><strong>Main file:</strong> <code>scss/exercises/_03-partials-imports.scss</code></p>
+        <p><strong>Keep running:</strong> <code>npm run dev</code></p>
+    </div>
+
+    <!-- Complete candy store layout -->
+    <div class="candy-store">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-brand">🍭 Sweet Store</div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">Candy</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Cart (3)</button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Sweet Dreams</h1>
+                <p class="hero-subtitle">The sweetest candy collection in town!</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-large btn-primary">Shop Now</button>
+                    <button class="btn btn-large btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">🍬🍭🧁🍫</div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="categories">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card chocolate">
+                    <div class="category-icon">🍫</div>
+                    <h3 class="category-name">Chocolate</h3>
+                    <p class="category-description">Rich and decadent chocolates</p>
+                    <button class="btn btn-secondary">Browse</button>
+                </div>
+                <div class="category-card gummy">
+                    <div class="category-icon">🐻</div>
+                    <h3 class="category-name">Gummies</h3>
+                    <p class="category-description">Chewy and fruity gummies</p>
+                    <button class="btn btn-secondary">Browse</button>
+                </div>
+                <div class="category-card hard-candy">
+                    <div class="category-icon">🍬</div>
+                    <h3 class="category-name">Hard Candy</h3>
+                    <p class="category-description">Classic hard candies</p>
+                    <button class="btn btn-secondary">Browse</button>
+                </div>
+                <div class="category-card specialty">
+                    <div class="category-icon">🎂</div>
+                    <h3 class="category-name">Specialty</h3>
+                    <p class="category-description">Unique and premium treats</p>
+                    <button class="btn btn-secondary">Browse</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Sweet!</h2>
+                <p>Subscribe for sweet deals and new arrivals</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="input-field">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sweet Store</h3>
+                    <p>Making the world sweeter, one candy at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sweet Store. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="exercise-instructions">
+        <h2>Your Mission: Organize This Code!</h2>
+        <p>This page has many different components. Instead of writing all the CSS in one file, you'll split it into organized partials:</p>
+        
+        <ol>
+            <li><strong>Create a partials folder:</strong> <code>scss/exercises/partials/</code></li>
+            <li><strong>Split your code into logical files:</strong>
+                <ul>
+                    <li><code>_variables.scss</code> - Colors, fonts, spacing</li>
+                    <li><code>_mixins.scss</code> - Reusable mixins and functions</li>
+                    <li><code>_base.scss</code> - Reset, typography, basic styles</li>
+                    <li><code>_buttons.scss</code> - All button styles</li>
+                    <li><code>_navigation.scss</code> - Navigation bar</li>
+                    <li><code>_hero.scss</code> - Hero section</li>
+                    <li><code>_categories.scss</code> - Category cards</li>
+                    <li><code>_newsletter.scss</code> - Newsletter section</li>
+                    <li><code>_footer.scss</code> - Footer styles</li>
+                </ul>
+            </li>
+            <li><strong>Import everything:</strong> Use <code>@import</code> in your main file</li>
+            <li><strong>See the magic:</strong> Same result, organized code!</li>
+        </ol>
+        
+        <div class="file-structure">
+            <h3>Target File Structure:</h3>
+            <pre>
+scss/exercises/partials/
+├── _variables.scss
+├── _mixins.scss  
+├── _base.scss
+├── _buttons.scss
+├── _navigation.scss
+├── _hero.scss
+├── _categories.scss
+├── _newsletter.scss
+└── _footer.scss
+            </pre>
+        </div>
+        
+        <div class="tip">
+            💡 <strong>Partial Files:</strong> Start with underscore (_) so SASS knows they're partials, not standalone files.
+        </div>
+        
+        <div class="tip">
+            🎯 <strong>Import Order Matters:</strong> Import variables and mixins first, then base styles, then components!
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+// Variables - Store all your design decisions in one place
+// This file gets imported first so other files can use these variables
+
+// ==========================================
+// COLOR PALETTE
+// ==========================================
+// TODO: Define your candy store color scheme
+// Primary colors
+// $primary-color: #e74c3c;
+// $secondary-color: #3498db;
+// $accent-color: #f39c12;
+
+// Neutral colors
+// $dark-color: #2c3e50;
+// $light-color: #ecf0f1;
+// $white: #ffffff;
+
+// Category colors (for different candy types)
+// $chocolate-color: #8B4513;
+// $gummy-color: #32CD32;
+// $hard-candy-color: #FF69B4;
+// $specialty-color: #9370DB;
+
+// ==========================================
+// TYPOGRAPHY
+// ==========================================
+// TODO: Define your font families and sizes
+// $primary-font: 'Arial', sans-serif;
+// $heading-font: 'Georgia', serif;
+
+// Font sizes
+// $font-size-small: 0.875rem;
+// $font-size-base: 1rem;
+// $font-size-large: 1.25rem;
+// $font-size-xl: 1.5rem;
+// $font-size-xxl: 2rem;
+
+// ==========================================
+// SPACING SYSTEM
+// ==========================================
+// TODO: Create a consistent spacing scale
+// $spacing-xs: 0.25rem;   // 4px
+// $spacing-sm: 0.5rem;    // 8px
+// $spacing-md: 1rem;      // 16px
+// $spacing-lg: 1.5rem;    // 24px
+// $spacing-xl: 2rem;      // 32px
+// $spacing-xxl: 3rem;     // 48px
+
+// ==========================================
+// LAYOUT VALUES
+// ==========================================
+// TODO: Define consistent layout values
+// $border-radius: 8px;
+// $border-radius-small: 4px;
+// $border-radius-large: 12px;
+
+// Container widths
+// $container-width: 1200px;
+// $container-padding: 20px;
+
+// ==========================================
+// SHADOWS
+// ==========================================
+// TODO: Define consistent shadow levels
+// $shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+// $shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+// $shadow-large: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+// ==========================================
+// TRANSITIONS
+// ==========================================  
+// TODO: Define consistent transition timings
+// $transition-fast: 0.15s ease;
+// $transition-base: 0.3s ease;
+// $transition-slow: 0.5s ease;
+
+// Pro tip: Having all your design decisions in one file makes it easy to:
+// - Maintain consistency across your site
+// - Make global changes (change one color, update everywhere)
+// - Share design systems with team members
+// - Create themes (just swap the variables file!)

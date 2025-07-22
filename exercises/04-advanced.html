@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4: Advanced Features - Dynamic Candy Themes</title>
+    <link rel="stylesheet" href="../css/exercises.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+            min-height: 100vh;
+        }
+        .exercise-header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .theme-switcher {
+            margin-bottom: 20px;
+        }
+        .theme-switcher button {
+            margin: 0 5px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="exercise-header">
+        <h1>🎪 Exercise 4: Advanced Features</h1>
+        <p><strong>Goal:</strong> Use SASS loops, conditionals, and built-in functions for dynamic styling</p>
+        <p><strong>Files to edit:</strong> <code>scss/exercises/_04-advanced.scss</code></p>
+        <p><strong>Keep running:</strong> <code>npm run dev</code></p>
+        
+        <div class="theme-switcher">
+            <strong>Try these themes (after completing the exercise):</strong>
+            <button onclick="document.body.className='theme-candy'">🍭 Candy</button>
+            <button onclick="document.body.className='theme-chocolate'">🍫 Chocolate</button>
+            <button onclick="document.body.className='theme-gummy'">🐻 Gummy</button>
+            <button onclick="document.body.className='theme-cotton-candy'">🍥 Cotton Candy</button>
+        </div>
+    </div>
+
+    <!-- Dynamic utility classes demo -->
+    <section class="utilities-demo">
+        <h2>Generated Utility Classes</h2>
+        <p>These classes are generated using SASS loops!</p>
+        
+        <div class="spacing-demo">
+            <h3>Margin Classes (Generated with @for loop)</h3>
+            <div class="m-1">Margin 1 (0.25rem)</div>
+            <div class="m-2">Margin 2 (0.5rem)</div>
+            <div class="m-3">Margin 3 (0.75rem)</div>
+            <div class="m-4">Margin 4 (1rem)</div>
+            <div class="m-5">Margin 5 (1.25rem)</div>
+        </div>
+        
+        <div class="color-demo">
+            <h3>Color Variations (Generated with built-in functions)</h3>
+            <div class="color-swatch bg-primary">Primary</div>
+            <div class="color-swatch bg-primary-light">Primary Light</div>
+            <div class="color-swatch bg-primary-lighter">Primary Lighter</div>
+            <div class="color-swatch bg-primary-dark">Primary Dark</div>
+            <div class="color-swatch bg-primary-darker">Primary Darker</div>
+        </div>
+    </section>
+
+    <!-- Theme variations demo -->
+    <section class="theme-demo">
+        <h2>Dynamic Theming</h2>
+        <p>Each theme changes colors using SASS conditionals and maps!</p>
+        
+        <div class="candy-showcase-advanced">
+            <div class="candy-card-advanced featured">
+                <div class="candy-icon-large">🍭</div>
+                <h3>Featured Candy</h3>
+                <p class="candy-price">$2.99</p>
+                <button class="btn-themed">Add to Cart</button>
+            </div>
+            
+            <div class="candy-card-advanced popular">
+                <div class="candy-icon-large">🍫</div>
+                <h3>Popular Choice</h3>
+                <p class="candy-price">$4.50</p>
+                <button class="btn-themed">Add to Cart</button>
+            </div>
+            
+            <div class="candy-card-advanced new">
+                <div class="candy-icon-large">🧁</div>
+                <h3>New Arrival</h3>
+                <p class="candy-price">$3.75</p>
+                <button class="btn-themed">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generated grid system -->
+    <section class="grid-demo">
+        <h2>Generated Grid System</h2>
+        <p>This grid system was created using SASS loops!</p>
+        
+        <div class="row">
+            <div class="col-4">Column 4/12</div>
+            <div class="col-4">Column 4/12</div>
+            <div class="col-4">Column 4/12</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-6">Column 6/12</div>
+            <div class="col-6">Column 6/12</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-3">3/12</div>
+            <div class="col-6">6/12</div>
+            <div class="col-3">3/12</div>
+        </div>
+    </section>
+
+    <!-- Responsive text sizes -->
+    <section class="typography-demo">
+        <h2>Responsive Typography</h2>
+        <p>Font sizes calculated with functions based on screen size!</p>
+        
+        <h1 class="responsive-heading-1">Heading 1 (Responsive)</h1>
+        <h2 class="responsive-heading-2">Heading 2 (Responsive)</h2>
+        <h3 class="responsive-heading-3">Heading 3 (Responsive)</h3>
+        <p class="responsive-body">Body text that scales perfectly across devices using mathematical functions!</p>
+    </section>
+
+    <div class="exercise-instructions">
+        <h2>Your Advanced SASS Mission:</h2>
+        
+        <div class="mission-section">
+            <h3>🔄 1. Use @for Loops</h3>
+            <ul>
+                <li>Generate margin/padding utility classes (m-1, m-2, etc.)</li>
+                <li>Create a responsive grid system (col-1 through col-12)</li>
+                <li>Build color variation classes</li>
+            </ul>
+        </div>
+        
+        <div class="mission-section">
+            <h3>📋 2. Use @each Loops</h3>
+            <ul>
+                <li>Generate themed button styles from a map</li>
+                <li>Create candy type variations</li>
+                <li>Build social media icon styles</li>
+            </ul>
+        </div>
+        
+        <div class="mission-section">
+            <h3>🎯 3. Use @if/@else Conditionals</h3>
+            <ul>
+                <li>Create theme-based color schemes</li>
+                <li>Build responsive mixins with conditional breakpoints</li>
+                <li>Handle light/dark mode variations</li>
+            </ul>
+        </div>
+        
+        <div class="mission-section">
+            <h3>🧮 4. Use Built-in Functions</h3>
+            <ul>
+                <li><code>lighten()</code> and <code>darken()</code> for color variations</li>
+                <li><code>mix()</code> for blending colors</li>
+                <li><code>scale()</code> for proportional adjustments</li>
+                <li>Math functions for responsive calculations</li>
+            </ul>
+        </div>
+        
+        <div class="tip">
+            🚀 <strong>Pro Tip:</strong> Advanced SASS features let you write less code and maintain more! Perfect for design systems.
+        </div>
+        
+        <div class="tip">
+            🎨 <strong>Real-world use:</strong> Companies use these techniques to build entire UI frameworks (like Bootstrap) with just a few SASS files!
+        </div>
+    </div>
+
+    <script>
+        // Simple theme switcher for demo
+        function switchTheme(theme) {
+            document.body.className = theme;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+// 📁 Exercise 3: Partials & Imports
+// Goal: Organize SASS into logical, maintainable files
+
+// ==========================================
+// IMPORT ORDER IS IMPORTANT!
+// ==========================================
+// 1. Variables first (other files need them)
+// 2. Mixins second (other files might use them)  
+// 3. Base styles (reset, typography)
+// 4. Components (navigation, buttons, etc.)
+// 5. Layout sections (hero, footer, etc.)
+
+// TODO: Import your partials in the correct order
+// Remember: Import files WITHOUT the underscore and .scss extension
+// Example: @import 'partials/variables';
+
+// Step 1: Foundation files (needed by others)
+// @import 'partials/variables';
+// @import 'partials/mixins';
+
+// Step 2: Base styles
+// @import 'partials/base';
+
+// Step 3: Reusable components
+// @import 'partials/buttons';
+
+// Step 4: Layout sections
+// @import 'partials/navigation';
+// @import 'partials/hero';
+// @import 'partials/categories';
+// @import 'partials/newsletter';
+// @import 'partials/footer';
+
+// ==========================================
+// WHY THIS ORGANIZATION?
+// ==========================================
+/*
+Variables & Mixins First:
+- Other files depend on these
+- Colors, spacing, reusable functions
+
+Base Styles:
+- Typography, resets, global styles
+- Foundation that everything builds on
+
+Components:
+- Reusable UI elements (buttons, forms)
+- Can be used anywhere in the site
+
+Layout Sections:
+- Page-specific areas
+- Build using base styles and components
+
+This creates a dependency hierarchy:
+Layout → Components → Base → Mixins/Variables
+
+Benefits:
+✅ Easy to find specific styles
+✅ Reusable across projects  
+✅ Team members can work on different files
+✅ Smaller, focused files
+✅ Better git history (changes are isolated)
+*/
+
+// ==========================================
+// YOUR TASK: CREATE THE PARTIAL FILES
+// ==========================================
+// Create these files in scss/exercises/partials/:
+/*
+1. _variables.scss - Define your color palette, fonts, spacing
+2. _mixins.scss - Create reusable mixins for buttons, cards, flex layouts
+3. _base.scss - Basic typography, resets, global styles
+4. _buttons.scss - All button variations and states
+5. _navigation.scss - Navigation bar styles
+6. _hero.scss - Hero section layout and styling  
+7. _categories.scss - Category grid and card styles
+8. _newsletter.scss - Newsletter signup section
+9. _footer.scss - Footer layout and links
+*/
+
+// Then uncomment the @import statements above!
+
+// ==========================================
+// BONUS: ADVANCED ORGANIZATION
+// ==========================================
+// For larger projects, you might organize like this:
+/*
+scss/
+├── abstracts/          # Pure Sass, no CSS output
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── _functions.scss
+├── vendors/           # Third-party CSS
+│   └── _bootstrap.scss
+├── base/              # Basic styles
+│   ├── _reset.scss
+│   └── _typography.scss  
+├── layout/            # Major layout components
+│   ├── _header.scss
+│   ├── _footer.scss
+│   └── _sidebar.scss
+├── components/        # Reusable components
+│   ├── _buttons.scss
+│   ├── _carousel.scss
+│   └── _dropdown.scss
+├── pages/            # Page-specific styles
+│   ├── _home.scss
+│   └── _about.scss
+└── main.scss         # Main file importing everything
+*/

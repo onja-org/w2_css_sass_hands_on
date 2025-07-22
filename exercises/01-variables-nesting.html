@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Variables & Nesting - Candy Cards</title>
+    <link rel="stylesheet" href="../css/exercises.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .exercise-header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="exercise-header">
+        <h1>🎨 Exercise 1: Variables & Nesting</h1>
+        <p><strong>Goal:</strong> Learn SASS variables and nesting by styling candy cards</p>
+        <p><strong>Files to edit:</strong> <code>scss/exercises/_01-variables-nesting.scss</code></p>
+        <p><strong>Keep running:</strong> <code>npm run dev</code> (watches for changes)</p>
+    </div>
+
+    <!-- This is what you'll be styling! -->
+    <div class="candy-showcase">
+        <div class="candy-card lollipop">
+            <div class="candy-image">🍭</div>
+            <h3 class="candy-name">Rainbow Lollipop</h3>
+            <p class="candy-description">Swirling colors of fruity goodness</p>
+            <div class="candy-price">$2.99</div>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="candy-card gummy">
+            <div class="candy-image">🐻</div>
+            <h3 class="candy-name">Gummy Bears</h3>
+            <p class="candy-description">Chewy bears in assorted flavors</p>
+            <div class="candy-price">$4.50</div>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="candy-card chocolate">
+            <div class="candy-image">🍫</div>
+            <h3 class="candy-name">Dark Chocolate</h3>
+            <p class="candy-description">Rich Belgian dark chocolate bar</p>
+            <div class="candy-price">$6.99</div>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+
+        <div class="candy-card cotton-candy">
+            <div class="candy-image">🍥</div>
+            <h3 class="candy-name">Cotton Candy</h3>
+            <p class="candy-description">Fluffy spun sugar clouds</p>
+            <div class="candy-price">$3.25</div>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="exercise-instructions">
+        <h2>Your Mission:</h2>
+        <ol>
+            <li><strong>Create variables</strong> in the SASS file for:
+                <ul>
+                    <li>Primary colors for each candy type</li>
+                    <li>Font family and sizes</li>
+                    <li>Spacing values</li>
+                </ul>
+            </li>
+            <li><strong>Use nesting</strong> to style the candy cards:
+                <ul>
+                    <li>Nest child elements inside <code>.candy-card</code></li>
+                    <li>Use <code>&:hover</code> for hover effects</li>
+                    <li>Try <code>&.lollipop</code> syntax for card variants</li>
+                </ul>
+            </li>
+            <li><strong>Compare</strong> your SASS with the compiled CSS in <code>css/exercises.css</code></li>
+        </ol>
+        
+        <div class="tip">
+            💡 <strong>Tip:</strong> Save your SASS file and watch the magic happen! The CSS auto-updates.
+        </div>
+    </div>
+</body>
+</html>

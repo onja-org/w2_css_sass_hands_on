@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2: Mixins & Functions - Candy Shop Interface</title>
+    <link rel="stylesheet" href="../css/exercises.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff9a8b, #ad5389);
+            min-height: 100vh;
+        }
+        .exercise-header {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="exercise-header">
+        <h1>🔧 Exercise 2: Mixins & Functions</h1>
+        <p><strong>Goal:</strong> Create reusable code with mixins and dynamic calculations with functions</p>
+        <p><strong>Files to edit:</strong> <code>scss/exercises/_02-mixins-functions.scss</code></p>
+        <p><strong>Keep running:</strong> <code>npm run dev</code></p>
+    </div>
+
+    <!-- Candy Shop Interface -->
+    <div class="candy-shop-interface">
+        <header class="shop-header">
+            <h1 class="shop-title">🍭 Sweet Dreams Candy Shop</h1>
+            <div class="shop-buttons">
+                <button class="btn btn-primary">Shop Now</button>
+                <button class="btn btn-secondary">View Cart</button>
+                <button class="btn btn-accent">Wishlist</button>
+            </div>
+        </header>
+
+        <section class="featured-section">
+            <h2>Featured Candies</h2>
+            <div class="candy-grid">
+                <div class="candy-item size-small">
+                    <div class="candy-icon">🍬</div>
+                    <h3>Hard Candy</h3>
+                    <button class="btn btn-small btn-primary">$1.99</button>
+                </div>
+                <div class="candy-item size-medium">
+                    <div class="candy-icon">🧁</div>
+                    <h3>Cupcake</h3>
+                    <button class="btn btn-medium btn-secondary">$3.99</button>
+                </div>
+                <div class="candy-item size-large">
+                    <div class="candy-icon">🎂</div>
+                    <h3>Birthday Cake</h3>
+                    <button class="btn btn-large btn-accent">$12.99</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="responsive-section">
+            <h2>Responsive Cards</h2>
+            <div class="responsive-grid">
+                <div class="responsive-card">
+                    <h3>Mobile First</h3>
+                    <p>This card adapts to different screen sizes using function-calculated breakpoints!</p>
+                </div>
+                <div class="responsive-card">
+                    <h3>Tablet Friendly</h3>
+                    <p>Functions calculate the perfect size for each device.</p>
+                </div>
+                <div class="responsive-card">
+                    <h3>Desktop Ready</h3>
+                    <p>Mixins ensure consistent styling across all cards.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="exercise-instructions">
+        <h2>Your Mission:</h2>
+        <ol>
+            <li><strong>Create Mixins</strong> for:
+                <ul>
+                    <li>Button styles (with parameters for size and color)</li>
+                    <li>Card layouts (consistent spacing and shadows)</li>
+                    <li>Flexbox patterns (reusable flex containers)</li>
+                </ul>
+            </li>
+            <li><strong>Create Functions</strong> for:
+                <ul>
+                    <li>Responsive font sizing (based on screen size)</li>
+                    <li>Color calculations (lighten/darken variants)</li>
+                    <li>Spacing calculations (proportional margins/padding)</li>
+                </ul>
+            </li>
+            <li><strong>Use Parameters</strong> to make your mixins flexible</li>
+            <li><strong>See the magic:</strong> Write less code, get more styles!</li>
+        </ol>
+        
+        <div class="tip">
+            💡 <strong>Key Concept:</strong> Mixins are like CSS templates - you define them once and use them everywhere with different parameters!
+        </div>
+        
+        <div class="tip">
+            🧮 <strong>Functions vs Mixins:</strong> Functions return values (like colors or sizes), mixins return groups of CSS properties.
+        </div>
+    </div>
+</body>
+</html>

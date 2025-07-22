@@ -1,0 +1,425 @@
+// 🎪 Exercise 4: Advanced SASS Features
+// Goal: Use loops, conditionals, and built-in functions for dynamic styling
+
+// ==========================================
+// VARIABLES AND MAPS
+// ==========================================
+$base-spacing: 0.25rem;
+$base-color: #e74c3c;
+
+// SASS Maps - like objects/dictionaries for storing related data
+$candy-themes: (
+  candy: (
+    primary: #ff6b9d,
+    secondary: #4ecdc4,
+    accent: #45b7d1
+  ),
+  chocolate: (
+    primary: #8B4513,
+    secondary: #D2691E,
+    accent: #F4A460
+  ),
+  gummy: (
+    primary: #32CD32,
+    secondary: #98FB98,
+    accent: #00FF7F
+  ),
+  cotton-candy: (
+    primary: #FFB6C1,
+    secondary: #FFC0CB,
+    accent: #FF69B4
+  )
+);
+
+$social-icons: (
+  facebook: #3b5998,
+  instagram: #e4405f,
+  twitter: #1da1f2,
+  youtube: #ff0000
+);
+
+// ==========================================
+// STEP 1: @FOR LOOPS
+// ==========================================
+// @for loops repeat code with a counter variable
+// Perfect for generating utility classes!
+
+// TODO: Generate margin utility classes
+// @for $i from 1 through 8 {
+//   .m-#{$i} {
+//     margin: $base-spacing * $i;
+//     padding: 10px;
+//     background: lighten($base-color, 40%);
+//     border-radius: 4px;
+//     margin-bottom: 10px;
+//     display: inline-block;
+//   }
+// }
+
+// TODO: Generate padding utility classes
+// @for $i from 1 through 6 {
+//   .p-#{$i} {
+//     padding: $base-spacing * $i;
+//   }
+// }
+
+// TODO: Generate a grid system
+// @for $i from 1 through 12 {
+//   .col-#{$i} {
+//     flex: 0 0 percentage($i / 12);
+//     max-width: percentage($i / 12);
+//     padding: 0 15px;
+//     box-sizing: border-box;
+//   }
+// }
+
+// Grid container
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  margin-bottom: 20px;
+  
+  > [class*="col-"] {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+}
+
+// TODO: Generate color variations using built-in functions
+// @for $i from 1 through 5 {
+//   $lightness: $i * 10%;
+//   
+//   .bg-primary-light-#{$i} {
+//     background: lighten($base-color, $lightness);
+//     color: white;
+//     padding: 10px;
+//     margin: 5px;
+//     border-radius: 4px;
+//   }
+// }
+
+// ==========================================
+// STEP 2: @EACH LOOPS
+// ==========================================
+// @each loops iterate over lists or maps
+// Great for working with related sets of data
+
+// TODO: Generate theme classes from the candy-themes map
+// @each $theme-name, $theme-colors in $candy-themes {
+//   .theme-#{$theme-name} {
+//     .btn-themed {
+//       background: map-get($theme-colors, primary);
+//       color: white;
+//       border: none;
+//       padding: 10px 20px;
+//       border-radius: 6px;
+//       cursor: pointer;
+//       transition: 0.3s ease;
+//       
+//       &:hover {
+//         background: darken(map-get($theme-colors, primary), 10%);
+//       }
+//     }
+//     
+//     .candy-card-advanced {
+//       border-left: 4px solid map-get($theme-colors, primary);
+//       
+//       &.featured {
+//         background: lighten(map-get($theme-colors, primary), 45%);
+//       }
+//       
+//       &.popular {
+//         background: lighten(map-get($theme-colors, secondary), 45%);
+//       }
+//       
+//       &.new {
+//         background: lighten(map-get($theme-colors, accent), 45%);
+//       }
+//     }
+//   }
+// }
+
+// TODO: Generate social media button styles
+// @each $network, $color in $social-icons {
+//   .btn-#{$network} {
+//     background: $color;
+//     color: white;
+//     border: none;
+//     padding: 10px 15px;
+//     border-radius: 4px;
+//     margin: 5px;
+//     cursor: pointer;
+//     
+//     &:hover {
+//       background: darken($color, 15%);
+//     }
+//   }
+// }
+
+// TODO: Generate candy type variations
+$candy-types: (lollipop, gummy, chocolate, hard-candy, cotton-candy);
+// @each $type in $candy-types {
+//   .candy-#{$type} {
+//     position: relative;
+//     
+//     &::before {
+//       content: "#{$type}";
+//       position: absolute;
+//       top: 5px;
+//       right: 5px;
+//       background: rgba(0,0,0,0.7);
+//       color: white;
+//       padding: 2px 6px;
+//       border-radius: 3px;
+//       font-size: 0.75rem;
+//       text-transform: capitalize;
+//     }
+//   }
+// }
+
+// ==========================================
+// STEP 3: @IF/@ELSE CONDITIONALS
+// ==========================================
+// Conditional logic in your CSS!
+
+// TODO: Create a function that returns different values based on conditions
+// @function theme-color($theme, $variant: primary) {
+//   @if map-has-key($candy-themes, $theme) {
+//     $theme-map: map-get($candy-themes, $theme);
+//     @if map-has-key($theme-map, $variant) {
+//       @return map-get($theme-map, $variant);
+//     } @else {
+//       @return #333; // fallback color
+//     }
+//   } @else {
+//     @return #333; // fallback color
+//   }
+// }
+
+// TODO: Create a mixin that changes styles based on theme
+// @mixin theme-aware-card($theme) {
+//   background: white;
+//   border-radius: 8px;
+//   padding: 20px;
+//   margin: 10px;
+//   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+//   
+//   @if $theme == candy {
+//     border-top: 4px solid theme-color(candy, primary);
+//     background: linear-gradient(135deg, #fff, lighten(theme-color(candy, primary), 48%));
+//   } @else if $theme == chocolate {
+//     border-top: 4px solid theme-color(chocolate, primary);
+//     background: linear-gradient(135deg, #fff, lighten(theme-color(chocolate, primary), 48%));
+//   } @else if $theme == gummy {
+//     border-top: 4px solid theme-color(gummy, primary);
+//     background: linear-gradient(135deg, #fff, lighten(theme-color(gummy, primary), 48%));
+//   } @else {
+//     border-top: 4px solid #ccc;
+//   }
+// }
+
+// TODO: Create responsive font sizing with conditionals
+// @function responsive-font($base-size, $screen-size: desktop) {
+//   @if $screen-size == mobile {
+//     @return $base-size * 0.8;
+//   } @else if $screen-size == tablet {
+//     @return $base-size * 0.9;
+//   } @else if $screen-size == desktop {
+//     @return $base-size;
+//   } @else if $screen-size == large-desktop {
+//     @return $base-size * 1.2;
+//   } @else {
+//     @return $base-size;
+//   }
+// }
+
+// ==========================================
+// STEP 4: BUILT-IN FUNCTIONS
+// ==========================================
+// SASS has many built-in functions for colors, math, strings, etc.
+
+.color-demo {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  
+  .color-swatch {
+    padding: 20px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    min-width: 120px;
+    text-align: center;
+  }
+}
+
+// TODO: Generate color variations using built-in functions
+// .bg-primary { background: $base-color; }
+// .bg-primary-light { background: lighten($base-color, 20%); }
+// .bg-primary-lighter { background: lighten($base-color, 40%); }
+// .bg-primary-dark { background: darken($base-color, 20%); }
+// .bg-primary-darker { background: darken($base-color, 40%); }
+
+// TODO: Create mixed colors
+// .bg-mixed {
+//   background: mix($base-color, #3498db, 50%); // 50/50 mix
+// }
+
+// TODO: Use mathematical functions
+// .calculated-width {
+//   width: percentage(2/3); // Converts to 66.666%
+// }
+
+// .scaled-padding {
+//   padding: scale(20px, 150%); // Increases by 50%
+// }
+
+// ==========================================
+// STYLING THE DEMO ELEMENTS
+// ==========================================
+
+.utilities-demo, .theme-demo, .grid-demo, .typography-demo {
+  background: white;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.spacing-demo > div {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.candy-showcase-advanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.candy-card-advanced {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+  
+  .candy-icon-large {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .candy-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 15px;
+  }
+}
+
+// Responsive typography examples
+.responsive-heading-1 {
+  // TODO: Use your responsive-font function
+  // font-size: responsive-font(2.5rem);
+  // 
+  // @media (max-width: 768px) {
+  //   font-size: responsive-font(2.5rem, mobile);
+  // }
+}
+
+.responsive-heading-2 {
+  // font-size: responsive-font(2rem);
+  // 
+  // @media (max-width: 768px) {
+  //   font-size: responsive-font(2rem, mobile);
+  // }
+}
+
+.responsive-body {
+  // font-size: responsive-font(1rem);
+  // line-height: 1.6;
+  // 
+  // @media (max-width: 768px) {
+  //   font-size: responsive-font(1rem, mobile);
+  // }
+}
+
+.exercise-instructions {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+  .mission-section {
+    margin: 25px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+    
+    h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+  }
+  
+  .tip {
+    background: #e8f5e8;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50;
+    margin: 20px 0;
+  }
+}
+
+// ==========================================
+// REFLECTION QUESTIONS
+// ==========================================
+/*
+After completing this exercise, think about:
+
+1. How much code did loops save you?
+   - Without loops: Write 12 individual .col-1, .col-2, etc. classes
+   - With loops: One @for statement generates all 12
+
+2. How do maps make theming easier?
+   - Without maps: Hardcode colors everywhere
+   - With maps: Change the map, update all themes instantly
+
+3. When would you use @if vs @each vs @for?
+   - @if: Different styles based on conditions
+   - @each: Iterate over related data (themes, social networks)
+   - @for: Generate numbered classes (grid columns, spacing)
+
+4. How do built-in functions help with design consistency?
+   - Manual color variations: Guess hex codes
+   - Function variations: Mathematical relationships that always work
+
+5. Real-world impact:
+   - Design systems: One source of truth for all styling
+   - Maintenance: Change one variable, update entire site
+   - Team work: Designers can modify variables, developers handle logic
+
+This is how CSS frameworks like Bootstrap and Tailwind are built!
+*/

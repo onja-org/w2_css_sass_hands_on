@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Dreams Candy Expo 2024 - Final SASS Project</title>
+    <link rel="stylesheet" href="../css/final-project.css">
+    <style>
+        /* Minimal base styles - everything else should come from your SASS! */
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-icon">🍭</span>
+                <span class="brand-text">Sweet Dreams Expo</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#exhibits" class="nav-link">Exhibits</a></li>
+                <li><a href="#vendors" class="nav-link">Vendors</a></li>
+                <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                <li><a href="#tickets" class="nav-link">Tickets</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm">Login</button>
+                <button class="btn btn-primary btn-sm">Get Tickets</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Sweet Dreams Candy Expo 2024</h1>
+                <p class="hero-subtitle">The world's largest celebration of confectionery magic</p>
+                <p class="hero-date">March 15-17, 2024 • Convention Center</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg">Get Your Tickets</button>
+                    <button class="btn btn-outline btn-lg">Learn More</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Vendors</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Visitors Expected</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-candy">🍭</div>
+                <div class="floating-candy">🍫</div>
+                <div class="floating-candy">🧁</div>
+                <div class="floating-candy">🍬</div>
+                <div class="floating-candy">🐻</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Exhibits -->
+    <section id="exhibits" class="exhibits">
+        <div class="container">
+            <h2 class="section-title">Featured Exhibits</h2>
+            <p class="section-subtitle">Discover amazing candy creations from around the world</p>
+            
+            <div class="exhibit-grid">
+                <div class="exhibit-card chocolate-palace">
+                    <div class="exhibit-image">🍫</div>
+                    <div class="exhibit-content">
+                        <h3 class="exhibit-title">Chocolate Palace</h3>
+                        <p class="exhibit-description">Explore a life-sized chocolate castle with interactive exhibits and tastings.</p>
+                        <div class="exhibit-meta">
+                            <span class="exhibit-location">Hall A</span>
+                            <span class="exhibit-time">All Day</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exhibit-card gummy-lab">
+                    <div class="exhibit-image">🔬</div>
+                    <div class="exhibit-content">
+                        <h3 class="exhibit-title">Gummy Science Lab</h3>
+                        <p class="exhibit-description">Watch live gummy candy creation and learn the science behind your favorites.</p>
+                        <div class="exhibit-meta">
+                            <span class="exhibit-location">Hall B</span>
+                            <span class="exhibit-time">10AM - 6PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exhibit-card vintage-collection">
+                    <div class="exhibit-image">🎪</div>
+                    <div class="exhibit-content">
+                        <h3 class="exhibit-title">Vintage Candy Collection</h3>
+                        <p class="exhibit-description">Journey through 100 years of candy history with rare and classic treats.</p>
+                        <div class="exhibit-meta">
+                            <span class="exhibit-location">Hall C</span>
+                            <span class="exhibit-time">9AM - 7PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exhibit-card cotton-cloud">
+                    <div class="exhibit-image">☁️</div>
+                    <div class="exhibit-content">
+                        <h3 class="exhibit-title">Cotton Candy Clouds</h3>
+                        <p class="exhibit-description">Walk through magical cotton candy installations and create your own flavors.</p>
+                        <div class="exhibit-meta">
+                            <span class="exhibit-location">Outdoor Plaza</span>
+                            <span class="exhibit-time">11AM - 5PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vendor Showcase -->
+    <section id="vendors" class="vendors">
+        <div class="container">
+            <h2 class="section-title">Featured Vendors</h2>
+            <p class="section-subtitle">Meet the sweetest vendors from around the globe</p>
+            
+            <div class="vendor-grid">
+                <div class="vendor-card premium">
+                    <div class="vendor-badge">Premium</div>
+                    <div class="vendor-logo">🏆</div>
+                    <h3 class="vendor-name">Sweet Innovations</h3>
+                    <p class="vendor-location">🇺🇸 San Francisco, USA</p>
+                    <p class="vendor-specialty">Artisanal Chocolates & Truffles</p>
+                    <div class="vendor-actions">
+                        <button class="btn btn-sm btn-secondary">View Products</button>
+                        <button class="btn btn-sm btn-outline">Visit Booth #42</button>
+                    </div>
+                </div>
+
+                <div class="vendor-card featured">
+                    <div class="vendor-badge">Featured</div>
+                    <div class="vendor-logo">🎭</div>
+                    <h3 class="vendor-name">Tokyo Candy Co.</h3>
+                    <p class="vendor-location">🇯🇵 Tokyo, Japan</p>
+                    <p class="vendor-specialty">Kawaii Gummies & Kit-Kats</p>
+                    <div class="vendor-actions">
+                        <button class="btn btn-sm btn-secondary">View Products</button>
+                        <button class="btn btn-sm btn-outline">Visit Booth #15</button>
+                    </div>
+                </div>
+
+                <div class="vendor-card new">
+                    <div class="vendor-badge">New</div>
+                    <div class="vendor-logo">🌟</div>
+                    <h3 class="vendor-name">Alpine Sweets</h3>
+                    <p class="vendor-location">🇨🇭 Zurich, Switzerland</p>
+                    <p class="vendor-specialty">Luxury Hard Candies</p>
+                    <div class="vendor-actions">
+                        <button class="btn btn-sm btn-secondary">View Products</button>
+                        <button class="btn btn-sm btn-outline">Visit Booth #28</button>
+                    </div>
+                </div>
+
+                <div class="vendor-card popular">
+                    <div class="vendor-badge">Popular</div>
+                    <div class="vendor-logo">🎨</div>
+                    <h3 class="vendor-name">Rainbow Confections</h3>
+                    <p class="vendor-location">🇬🇧 London, UK</p>
+                    <p class="vendor-specialty">Custom Cotton Candy</p>
+                    <div class="vendor-actions">
+                        <button class="btn btn-sm btn-secondary">View Products</button>
+                        <button class="btn btn-sm btn-outline">Visit Booth #7</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Schedule -->
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <h2 class="section-title">Event Schedule</h2>
+            <p class="section-subtitle">Don't miss these sweet events!</p>
+            
+            <div class="schedule-tabs">
+                <button class="tab-button active" data-day="friday">Friday</button>
+                <button class="tab-button" data-day="saturday">Saturday</button>
+                <button class="tab-button" data-day="sunday">Sunday</button>
+            </div>
+            
+            <div class="schedule-content">
+                <div class="day-schedule active" id="friday">
+                    <div class="time-slot">
+                        <div class="time">9:00 AM</div>
+                        <div class="event">
+                            <h4>Opening Ceremony</h4>
+                            <p>Grand opening with special guests and ribbon cutting</p>
+                            <span class="location">Main Stage</span>
+                        </div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">11:00 AM</div>
+                        <div class="event">
+                            <h4>Chocolate Sculpting Workshop</h4>
+                            <p>Learn from master chocolatiers</p>
+                            <span class="location">Workshop Room A</span>
+                        </div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">2:00 PM</div>
+                        <div class="event">
+                            <h4>Global Candy Tasting</h4>
+                            <p>Sample rare candies from 20 countries</p>
+                            <span class="location">Tasting Hall</span>
+                        </div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">4:30 PM</div>
+                        <div class="event">
+                            <h4>Kids Candy Making</h4>
+                            <p>Fun hands-on candy creation for children</p>
+                            <span class="location">Kids Zone</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section id="tickets" class="tickets">
+        <div class="container">
+            <h2 class="section-title">Get Your Tickets</h2>
+            <p class="section-subtitle">Choose the perfect ticket for your sweet adventure</p>
+            
+            <div class="ticket-grid">
+                <div class="ticket-card basic">
+                    <div class="ticket-header">
+                        <h3 class="ticket-name">Basic Pass</h3>
+                        <div class="ticket-price">
+                            <span class="currency">$</span>
+                            <span class="amount">25</span>
+                            <span class="period">/ day</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-features">
+                        <li>✅ Exhibit hall access</li>
+                        <li>✅ Vendor sampling</li>
+                        <li>✅ Basic event entry</li>
+                        <li>❌ Workshop access</li>
+                        <li>❌ VIP lounge</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full">Choose Basic</button>
+                </div>
+
+                <div class="ticket-card premium featured-ticket">
+                    <div class="ticket-badge">Most Popular</div>
+                    <div class="ticket-header">
+                        <h3 class="ticket-name">Premium Pass</h3>
+                        <div class="ticket-price">
+                            <span class="currency">$</span>
+                            <span class="amount">65</span>
+                            <span class="period">/ day</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-features">
+                        <li>✅ Everything in Basic</li>
+                        <li>✅ All workshop access</li>
+                        <li>✅ Priority seating</li>
+                        <li>✅ Exclusive tastings</li>
+                        <li>❌ VIP lounge</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full">Choose Premium</button>
+                </div>
+
+                <div class="ticket-card vip">
+                    <div class="ticket-header">
+                        <h3 class="ticket-name">VIP Experience</h3>
+                        <div class="ticket-price">
+                            <span class="currency">$</span>
+                            <span class="amount">150</span>
+                            <span class="period">/ day</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-features">
+                        <li>✅ Everything in Premium</li>
+                        <li>✅ VIP lounge access</li>
+                        <li>✅ Private meet & greets</li>
+                        <li>✅ Goodie bag included</li>
+                        <li>✅ Complimentary lunch</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-full">Choose VIP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Sweet!</h2>
+                <p>Get updates on new exhibits, special offers, and candy news</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email" class="form-input">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Sweet Dreams Expo</h3>
+                    <p>Making the world sweeter, one candy at a time.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📺</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#exhibits">Exhibits</a></li>
+                        <li><a href="#vendors">Vendors</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 123 Sweet Street<br>Candy City, CC 12345</p>
+                    <p>📞 (555) 123-SWEET</p>
+                    <p>✉️ info@sweetdreamsexpo.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sweet Dreams Expo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple tab switching for schedule
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // In a real project, you'd switch the schedule content here
+            });
+        });
+    </script>
+</body>
+</html>
