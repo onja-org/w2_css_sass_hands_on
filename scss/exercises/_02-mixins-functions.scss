@@ -6,25 +6,30 @@
 // ==========================================
 // Functions return values (numbers, colors, strings, etc.)
 // They're like calculators that compute values for your CSS
+// This is useful for reducing repetition and making your code more maintainable
+// Look at the functions below and think about why they are useful instead of hardcoding values
 
 // TODO: Create a function for responsive font sizes
+// NOTE: This function lets us calculate font sizes based on a base size and a scale factor.
 // Functions use @function and @return
 // @function responsive-font($base-size, $scale-factor: 1.2) {
 //   @return $base-size * $scale-factor;
 // }
 
-// TODO: Create a function for spacing calculations  
+// TODO: Create a function for spacing calculations
 // @function spacing($multiplier) {
 //   $base-spacing: 1rem;
 //   @return $base-spacing * $multiplier;
 // }
 
 // TODO: Create a function for color variations
+// NOTE: This function allows us to create lighter or darker variations of a base color.
+// NOTE: Instead of having to calculate these manually, we can just call this function with the base color and the desired variation.
 // @function candy-color($base-color, $variation: 'normal') {
 //   @if $variation == 'light' {
-//     @return lighten($base-color, 20%);
+//     @return color.adjust($base-color, lightness: 20%);
 //   } @else if $variation == 'dark' {
-//     @return darken($base-color, 20%);
+//     @return color.adjust($base-color, $lightness: -20%);
 //   } @else {
 //     @return $base-color;
 //   }
@@ -35,8 +40,11 @@
 // ==========================================
 // Mixins are reusable groups of CSS properties
 // Think of them as templates you can customize with parameters
+// Every property you write inside of a mixin will be applied to any style where you include the mixin
+// We will see examples of including mixins in the CSS below, but just know that you can create a mixin with @mixin and use it with @include
 
 // TODO: Create a mixin for button styles
+// NOTE: The 'medium' and '#3498db' here are default values. This means that if you don't specify them when using the mixin, it will use these defaults.
 // @mixin button-style($size: medium, $color: #3498db) {
 //   display: inline-block;
 //   border: none;
@@ -46,7 +54,7 @@
 //   font-weight: bold;
 //   text-decoration: none;
 //   text-align: center;
-//   
+//
 //   // Use @if to handle different sizes
 //   @if $size == small {
 //     padding: 8px 16px;
@@ -58,12 +66,12 @@
 //     padding: 16px 32px;
 //     font-size: 1.125rem;
 //   }
-//   
+//
 //   background: $color;
 //   color: white;
-//   
+//
 //   &:hover {
-//     background: darken($color, 10%);
+//     background: color.adjust($color, $lightness: -10%);
 //     transform: translateY(-2px);
 //   }
 // }
@@ -73,11 +81,11 @@
 //   background: white;
 //   border-radius: 8px;
 //   padding: $padding;
-//   
+//
 //   @if $shadow {
 //     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 //   }
-//   
+//
 //   &:hover {
 //     transform: translateY(-2px);
 //     @if $shadow {
@@ -105,155 +113,155 @@ $secondary-color: #3498db;
 $accent-color: #f39c12;
 
 .candy-shop-interface {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .shop-header {
-  // TODO: Use your card-layout mixin
-  // @include card-layout(2rem, true);
-  // @include flex-container(column, center, center, 1.5rem);
-  
-  .shop-title {
-    margin: 0;
-    // TODO: Use your responsive-font function
-    // font-size: responsive-font(2rem, 1.5);
-    color: #333;
-  }
-  
-  .shop-buttons {
-    // TODO: Use your flex-container mixin
-    // @include flex-container(row, center, center, 1rem);
-  }
+    // TODO: Use your card-layout mixin
+    // @include card-layout(2rem, true);
+    // @include flex-container(column, center, center, 1.5rem);
+
+    .shop-title {
+        margin: 0;
+        // TODO: Use your responsive-font function
+        // font-size: responsive-font(2rem, 1.5);
+        color: #333;
+    }
+
+    .shop-buttons {
+        // TODO: Use your flex-container mixin
+        // @include flex-container(row, center, center, 1rem);
+    }
 }
 
 // Button classes using your mixin
 .btn {
-  // TODO: Include your base button style
-  // @include button-style();
-  
-  // Specific button types
-  &.btn-primary {
-    // TODO: Use your mixin with primary color
-    // @include button-style(medium, $primary-color);
-  }
-  
-  &.btn-secondary {
-    // TODO: Use your mixin with secondary color  
-    // @include button-style(medium, $secondary-color);
-  }
-  
-  &.btn-accent {
-    // TODO: Use your mixin with accent color
-    // @include button-style(medium, $accent-color);
-  }
-  
-  // Size variations
-  &.btn-small {
-    // TODO: Use your mixin with small size
-    // @include button-style(small, $primary-color);
-  }
-  
-  &.btn-medium {
-    // @include button-style(medium, $secondary-color);
-  }
-  
-  &.btn-large {
-    // @include button-style(large, $accent-color);
-  }
+    // TODO: Include your base button style
+    // @include button-style();
+
+    // Specific button types
+    &.btn-primary {
+        // TODO: Use your mixin with primary color
+        // @include button-style(medium, $primary-color);
+    }
+
+    &.btn-secondary {
+        // TODO: Use your mixin with secondary color
+        // @include button-style(medium, $secondary-color);
+    }
+
+    &.btn-accent {
+        // TODO: Use your mixin with accent color
+        // @include button-style(medium, $accent-color);
+    }
+
+    // Size variations
+    &.btn-small {
+        // TODO: Use your mixin with small size
+        // @include button-style(small, $primary-color);
+    }
+
+    &.btn-medium {
+        // @include button-style(medium, $secondary-color);
+    }
+
+    &.btn-large {
+        // @include button-style(large, $accent-color);
+    }
 }
 
 .featured-section {
-  // TODO: Use your card-layout mixin
-  // @include card-layout(2rem);
-  margin-bottom: 2rem;
-  
-  h2 {
-    text-align: center;
-    color: #333;
+    // TODO: Use your card-layout mixin
+    // @include card-layout(2rem);
     margin-bottom: 2rem;
-  }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 2rem;
+    }
 }
 
 .candy-grid {
-  // TODO: Use your flex-container mixin
-  // @include flex-container(row, space-around, stretch, 1rem);
-  flex-wrap: wrap;
+    // TODO: Use your flex-container mixin
+    // @include flex-container(row, space-around, stretch, 1rem);
+    flex-wrap: wrap;
 }
 
 .candy-item {
-  // TODO: Use your card-layout mixin
-  // @include card-layout(1.5rem);
-  text-align: center;
-  min-width: 200px;
-  flex: 1;
-  
-  .candy-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  h3 {
-    margin: 0 0 1rem 0;
-    color: #333;
-  }
-  
-  // Size variations using functions
-  &.size-small {
-    // TODO: Use your spacing function
-    // padding: spacing(0.75);
-  }
-  
-  &.size-medium {
-    // padding: spacing(1);
-  }
-  
-  &.size-large {
-    // padding: spacing(1.5);
-  }
+    // TODO: Use your card-layout mixin
+    // @include card-layout(1.5rem);
+    text-align: center;
+    min-width: 200px;
+    flex: 1;
+
+    .candy-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        margin: 0 0 1rem 0;
+        color: #333;
+    }
+
+    // Size variations using functions
+    &.size-small {
+        // TODO: Use your spacing function
+        // padding: spacing(0.75);
+    }
+
+    &.size-medium {
+        // padding: spacing(1);
+    }
+
+    &.size-large {
+        // padding: spacing(1.5);
+    }
 }
 
 .responsive-section {
-  // TODO: Use your card-layout mixin
-  // @include card-layout(2rem);
-  
-  h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 2rem;
-  }
+    // TODO: Use your card-layout mixin
+    // @include card-layout(2rem);
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 2rem;
+    }
 }
 
 .responsive-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
 
 .responsive-card {
-  // TODO: Use your card-layout mixin
-  // @include card-layout();
-  
-  h3 {
-    color: $primary-color;
-    margin-top: 0;
-  }
-  
-  p {
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  // Responsive adjustments using functions
-  @media (max-width: 768px) {
-    // TODO: Use your spacing function for mobile
-    // padding: spacing(1);
-  }
-  
-  @media (min-width: 1024px) {
-    // TODO: Use your spacing function for desktop
-    // padding: spacing(2);
-  }
+    // TODO: Use your card-layout mixin
+    // @include card-layout();
+
+    h3 {
+        color: $primary-color;
+        margin-top: 0;
+    }
+
+    p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    // Responsive adjustments using functions
+    @media (max-width: 768px) {
+        // TODO: Use your spacing function for mobile
+        // padding: spacing(1);
+    }
+
+    @media (min-width: 1024px) {
+        // TODO: Use your spacing function for desktop
+        // padding: spacing(2);
+    }
 }
 
 // ==========================================
@@ -281,12 +289,12 @@ $accent-color: #f39c12;
 // Example usage (uncomment to try):
 // .responsive-example {
 //   color: red;
-//   
+//
 //   @include responsive(mobile) {
 //     color: blue;
 //     font-size: 14px;
 //   }
-//   
+//
 //   @include responsive(desktop) {
 //     color: green;
 //     font-size: 18px;

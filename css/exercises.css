@@ -139,7 +139,7 @@ Layout → Components → Base → Mixins/Variables
 
 Benefits:
 ✅ Easy to find specific styles
-✅ Reusable across projects  
+✅ Reusable across projects
 ✅ Team members can work on different files
 ✅ Smaller, focused files
 ✅ Better git history (changes are isolated)
@@ -150,7 +150,7 @@ Benefits:
 3. _base.scss - Basic typography, resets, global styles
 4. _buttons.scss - All button variations and states
 5. _navigation.scss - Navigation bar styles
-6. _hero.scss - Hero section layout and styling  
+6. _hero.scss - Hero section layout and styling
 7. _categories.scss - Category grid and card styles
 8. _newsletter.scss - Newsletter signup section
 9. _footer.scss - Footer layout and links
@@ -165,7 +165,7 @@ scss/
 │   └── _bootstrap.scss
 ├── base/              # Basic styles
 │   ├── _reset.scss
-│   └── _typography.scss  
+│   └── _typography.scss
 ├── layout/            # Major layout components
 │   ├── _header.scss
 │   ├── _footer.scss
@@ -209,7 +209,10 @@ scss/
   text-align: center;
 }
 
-.utilities-demo, .theme-demo, .grid-demo, .typography-demo {
+.utilities-demo,
+.theme-demo,
+.grid-demo,
+.typography-demo {
   background: white;
   padding: 30px;
   margin: 20px 0;

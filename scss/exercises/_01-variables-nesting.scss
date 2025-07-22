@@ -9,20 +9,20 @@
 
 // TODO: Create color variables for each candy type
 // Example: $lollipop-color: #ff6b9d;
-// $lollipop-color: 
-// $gummy-color: 
-// $chocolate-color: 
-// $cotton-candy-color: 
+// $lollipop-color:
+// $gummy-color:
+// $chocolate-color:
+// $cotton-candy-color:
 
 // TODO: Create typography variables
 // $primary-font: 'Arial', sans-serif;
-// $heading-size: 
-// $price-size: 
+// $heading-size:
+// $price-size:
 
 // TODO: Create spacing variables
-// $card-padding: 
-// $card-margin: 
-// $border-radius: 
+// $card-padding:
+// $card-margin:
+// $border-radius:
 
 // ==========================================
 // STEP 2: STYLE WITH NESTING
@@ -31,151 +31,151 @@
 // Instead of writing separate selectors, you can nest them!
 
 .candy-showcase {
-  // TODO: Style the container
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  // gap: $card-margin; // Use your variable!
+    // TODO: Style the container
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    // gap: $card-margin; // Use your variable!
 }
 
 .candy-card {
-  // TODO: Style the main card
-  // background: white;
-  // border-radius: $border-radius;
-  // padding: $card-padding;
-  // Look how nesting works - child elements go inside the parent!
-  
-  // Nested element: candy image
-  .candy-image {
-    // TODO: Style the emoji
-    // font-size: 4rem;
-    // text-align: center;
-    // margin-bottom: 1rem;
-  }
-  
-  // Nested element: candy name
-  .candy-name {
-    // TODO: Style the heading
-    // font-family: $primary-font;
-    // font-size: $heading-size;
-    // margin: 0 0 0.5rem 0;
-    // text-align: center;
-  }
-  
-  // Nested element: description
-  .candy-description {
-    // TODO: Style the description
-    // color: #666;
-    // text-align: center;
-    // font-size: 0.9rem;
-    // margin-bottom: 1rem;
-  }
-  
-  // Nested element: price
-  .candy-price {
-    // TODO: Style the price
-    // font-weight: bold;
-    // font-size: $price-size;
-    // color: #333;
-    // text-align: center;
-    // margin-bottom: 1rem;
-  }
-  
-  // Nested element: button
-  .buy-button {
-    // TODO: Style the button
-    // width: 100%;
-    // padding: 12px;
-    // border: none;
-    // border-radius: 6px;
-    // font-weight: bold;
-    // cursor: pointer;
-    // transition: all 0.3s ease;
-    
-    // Nested pseudo-class: hover effect
-    // The & refers to the parent selector (.buy-button)
+    // TODO: Style the main card
+    // background: white;
+    // border-radius: $border-radius;
+    // padding: $card-padding;
+    // Look how nesting works - child elements go inside the parent!
+
+    // Nested element: candy image
+    .candy-image {
+        // TODO: Style the emoji
+        // font-size: 4rem;
+        // text-align: center;
+        // margin-bottom: 1rem;
+    }
+
+    // Nested element: candy name
+    .candy-name {
+        // TODO: Style the heading
+        // font-family: $primary-font;
+        // font-size: $heading-size;
+        // margin: 0 0 0.5rem 0;
+        // text-align: center;
+    }
+
+    // Nested element: description
+    .candy-description {
+        // TODO: Style the description
+        // color: #666;
+        // text-align: center;
+        // font-size: 0.9rem;
+        // margin-bottom: 1rem;
+    }
+
+    // Nested element: price
+    .candy-price {
+        // TODO: Style the price
+        // font-weight: bold;
+        // font-size: $price-size;
+        // color: #333;
+        // text-align: center;
+        // margin-bottom: 1rem;
+    }
+
+    // Nested element: button
+    .buy-button {
+        // TODO: Style the button
+        // width: 100%;
+        // padding: 12px;
+        // border: none;
+        // border-radius: 6px;
+        // font-weight: bold;
+        // cursor: pointer;
+        // transition: all 0.3s ease;
+
+        // Nested pseudo-class: hover effect
+        // The & refers to the parent selector (.buy-button)
+        &:hover {
+            // TODO: Add hover effect
+            // transform: translateY(-2px);
+            // box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    }
+
+    // SPECIAL NESTING: Card variants
+    // The & symbol refers to the parent (.candy-card)
+    // So &.lollipop means ".candy-card.lollipop"
+
+    &.lollipop {
+        // TODO: Use your lollipop variable
+        // border-left: 4px solid $lollipop-color;
+
+        .buy-button {
+            // TODO: Use the same color for the button
+            // background: $lollipop-color;
+            // color: white;
+        }
+    }
+
+    &.gummy {
+        // TODO: Style the gummy variant
+        // border-left: 4px solid $gummy-color;
+
+        .buy-button {
+            // background: $gummy-color;
+            // color: white;
+        }
+    }
+
+    &.chocolate {
+        // TODO: Style the chocolate variant
+        // border-left: 4px solid $chocolate-color;
+
+        .buy-button {
+            // background: $chocolate-color;
+            // color: white;
+        }
+    }
+
+    &.cotton-candy {
+        // TODO: Style the cotton candy variant
+        // border-left: 4px solid $cotton-candy-color;
+
+        .buy-button {
+            // background: $cotton-candy-color;
+            // color: white;
+        }
+    }
+
+    // Card hover effect (applies to the whole card)
     &:hover {
-      // TODO: Add hover effect
-      // transform: translateY(-2px);
-      // box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        // TODO: Add a subtle hover effect
+        // transform: translateY(-4px);
+        // box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        // transition: all 0.3s ease;
     }
-  }
-  
-  // SPECIAL NESTING: Card variants
-  // The & symbol refers to the parent (.candy-card)
-  // So &.lollipop means ".candy-card.lollipop"
-  
-  &.lollipop {
-    // TODO: Use your lollipop variable
-    // border-left: 4px solid $lollipop-color;
-    
-    .buy-button {
-      // TODO: Use the same color for the button
-      // background: $lollipop-color;
-      // color: white;
-    }
-  }
-  
-  &.gummy {
-    // TODO: Style the gummy variant
-    // border-left: 4px solid $gummy-color;
-    
-    .buy-button {
-      // background: $gummy-color;
-      // color: white;
-    }
-  }
-  
-  &.chocolate {
-    // TODO: Style the chocolate variant
-    // border-left: 4px solid $chocolate-color;
-    
-    .buy-button {
-      // background: $chocolate-color;
-      // color: white;
-    }
-  }
-  
-  &.cotton-candy {
-    // TODO: Style the cotton candy variant
-    // border-left: 4px solid $cotton-candy-color;
-    
-    .buy-button {
-      // background: $cotton-candy-color;
-      // color: white;
-    }
-  }
-  
-  // Card hover effect (applies to the whole card)
-  &:hover {
-    // TODO: Add a subtle hover effect
-    // transform: translateY(-4px);
-    // box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    // transition: all 0.3s ease;
-  }
 }
 
 // ==========================================
 // BONUS SECTION: Exercise instructions styling
 // ==========================================
 .exercise-instructions {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  
-  h2 {
-    color: #333;
-    margin-top: 0;
-  }
-  
-  .tip {
-    background: #e8f5e8;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #4caf50;
-    margin-top: 20px;
-  }
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        color: #333;
+        margin-top: 0;
+    }
+
+    .tip {
+        background: #e8f5e8;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #4caf50;
+        margin-top: 20px;
+    }
 }
 
 // ==========================================

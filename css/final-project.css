@@ -123,7 +123,7 @@ FEATURES TO IMPLEMENT:
 ✅ @for loops for utility classes and grid system
 ✅ @each loops for theme variations (card types)
 ✅ @if/@else for conditional styling (card badges)
-✅ Built-in functions (lighten, darken, mix)
+✅ Built-in functions (color.adjust, mix)
 ✅ Proper nesting that mirrors HTML structure
 ✅ Responsive design with mobile-first approach
 ✅ Well-organized partials for maintainability

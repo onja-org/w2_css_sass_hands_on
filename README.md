@@ -110,7 +110,7 @@ Work through these exercises in order. Each builds on the previous one!
 **Key concepts**:
 - `@for`, `@each` loops generate repetitive CSS
 - `@if/@else` for conditional styles
-- Built-in functions: `lighten()`, `darken()`, `mix()`
+- Built-in functions: `color.adjust()`, `mix()`
 
 ---
 
