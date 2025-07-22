@@ -3,30 +3,32 @@
 // Use ALL the SASS features you've learned!
 
 // ==========================================
-// IMPORT ORDER MATTERS!
+// @USE SYNTAX - MODERN SASS!
 // ==========================================
+// @use is the modern way to include SASS files (replaces @import)
+// Benefits: Better performance, explicit dependencies, namespace control
 
 // 1. ABSTRACTS - Pure Sass, no CSS output
-@import 'final-project/abstracts/variables';
-@import 'final-project/abstracts/functions';
-@import 'final-project/abstracts/mixins';
+@use 'final-project/abstracts/variables' as *;  // * makes variables global
+@use 'final-project/abstracts/functions' as *;  // * makes functions global
+@use 'final-project/abstracts/mixins' as *;     // * makes mixins global
 
 // 2. BASE - Basic styles that apply globally
-@import 'final-project/base/reset';
-@import 'final-project/base/typography';
+// @use 'final-project/base/reset';
+// @use 'final-project/base/typography';
 
 // 3. LAYOUT - Major layout components
-@import 'final-project/layout/grid';
-@import 'final-project/layout/header';
-@import 'final-project/layout/footer';
+// @use 'final-project/layout/grid';
+// @use 'final-project/layout/header';
+// @use 'final-project/layout/footer';
 
 // 4. COMPONENTS - Reusable UI elements
-@import 'final-project/components/buttons';
-@import 'final-project/components/cards';
-@import 'final-project/components/forms';
+// @use 'final-project/components/buttons';
+// @use 'final-project/components/cards';
+// @use 'final-project/components/forms';
 
 // 5. PAGES - Page-specific styles
-@import 'final-project/pages/home';
+// @use 'final-project/pages/home';
 
 // ==========================================
 // YOUR MISSION:

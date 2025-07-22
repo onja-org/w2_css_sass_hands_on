@@ -242,6 +242,8 @@ $candy-types: (lollipop, gummy, chocolate, hard-candy, cotton-candy);
 // STEP 4: BUILT-IN FUNCTIONS
 // ==========================================
 // SASS has many built-in functions for colors, math, strings, etc.
+// NOTE: Modern SASS uses color.adjust() instead of lighten()/darken()
+// You'll see the modern syntax in the final project!
 
 .color-demo {
   display: flex;

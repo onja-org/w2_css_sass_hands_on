@@ -1,0 +1,315 @@
+@charset "UTF-8";
+.exercise-instructions {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.exercise-instructions h2 {
+  color: #333;
+  margin-top: 0;
+}
+.exercise-instructions .tip {
+  background: #e8f5e8;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+  margin-top: 20px;
+}
+
+/*
+After completing this exercise, think about:
+
+1. How many times did you type each color value?
+   - Without variables: Every time you used it
+   - With variables: Just once (in the variable definition)
+
+2. What happens when you want to change a color?
+   - Without variables: Find and replace everywhere
+   - With variables: Change it in one place
+
+3. How does nesting compare to regular CSS?
+   - Regular CSS: .candy-card .buy-button:hover { ... }
+   - SASS nesting: Inside .candy-card, inside .buy-button, &:hover { ... }
+
+4. Look at the compiled CSS in css/exercises.css
+   - How does SASS nesting become regular CSS?
+   - How are variables replaced with actual values?
+
+This is the power of preprocessing - write better code, get standard CSS!
+*/
+.candy-shop-interface {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-header .shop-title {
+  margin: 0;
+  color: #333;
+}
+.featured-section {
+  margin-bottom: 2rem;
+}
+.featured-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.candy-grid {
+  flex-wrap: wrap;
+}
+
+.candy-item {
+  text-align: center;
+  min-width: 200px;
+  flex: 1;
+}
+.candy-item .candy-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.candy-item h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+.responsive-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.responsive-card h3 {
+  color: #e74c3c;
+  margin-top: 0;
+}
+.responsive-card p {
+  color: #666;
+  line-height: 1.6;
+}
+/*
+After completing this exercise, think about:
+
+1. How many times did you write button styles?
+   - Without mixins: Every single button class
+   - With mixins: Once in the mixin, then just @include everywhere
+
+2. What happens when you want to change button styling?
+   - Without mixins: Update every button class individually
+   - With mixins: Change the mixin once, all buttons update
+
+3. How do functions help with calculations?
+   - Static values: Hard to maintain and adjust
+   - Function values: Change the base value, everything scales
+
+4. What's the difference between mixins and functions?
+   - Functions: Return single values (colors, sizes, numbers)
+   - Mixins: Return groups of CSS properties (entire style blocks)
+
+5. Look at the compiled CSS - how do your mixins become regular CSS?
+
+This is DRY (Don't Repeat Yourself) programming applied to CSS!
+*/
+/*
+Variables & Mixins First:
+- Other files depend on these
+- Colors, spacing, reusable functions
+
+Base Styles:
+- Typography, resets, global styles
+- Foundation that everything builds on
+
+Components:
+- Reusable UI elements (buttons, forms)
+- Can be used anywhere in the site
+
+Layout Sections:
+- Page-specific areas
+- Build using base styles and components
+
+This creates a dependency hierarchy:
+Layout → Components → Base → Mixins/Variables
+
+Benefits:
+✅ Easy to find specific styles
+✅ Reusable across projects  
+✅ Team members can work on different files
+✅ Smaller, focused files
+✅ Better git history (changes are isolated)
+*/
+/*
+1. _variables.scss - Define your color palette, fonts, spacing
+2. _mixins.scss - Create reusable mixins for buttons, cards, flex layouts
+3. _base.scss - Basic typography, resets, global styles
+4. _buttons.scss - All button variations and states
+5. _navigation.scss - Navigation bar styles
+6. _hero.scss - Hero section layout and styling  
+7. _categories.scss - Category grid and card styles
+8. _newsletter.scss - Newsletter signup section
+9. _footer.scss - Footer layout and links
+*/
+/*
+scss/
+├── abstracts/          # Pure Sass, no CSS output
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   └── _functions.scss
+├── vendors/           # Third-party CSS
+│   └── _bootstrap.scss
+├── base/              # Basic styles
+│   ├── _reset.scss
+│   └── _typography.scss  
+├── layout/            # Major layout components
+│   ├── _header.scss
+│   ├── _footer.scss
+│   └── _sidebar.scss
+├── components/        # Reusable components
+│   ├── _buttons.scss
+│   ├── _carousel.scss
+│   └── _dropdown.scss
+├── pages/            # Page-specific styles
+│   ├── _home.scss
+│   └── _about.scss
+└── main.scss         # Main file importing everything
+*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  margin-bottom: 20px;
+}
+.row > [class*=col-] {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px 15px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.color-demo {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.color-demo .color-swatch {
+  padding: 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  min-width: 120px;
+  text-align: center;
+}
+
+.utilities-demo, .theme-demo, .grid-demo, .typography-demo {
+  background: white;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.spacing-demo > div {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.candy-showcase-advanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.candy-card-advanced {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+.candy-card-advanced:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.candy-card-advanced .candy-icon-large {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.candy-card-advanced h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+.candy-card-advanced .candy-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.exercise-instructions {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.exercise-instructions .mission-section {
+  margin: 25px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+.exercise-instructions .mission-section h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+.exercise-instructions .tip {
+  background: #e8f5e8;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+  margin: 20px 0;
+}
+
+/*
+After completing this exercise, think about:
+
+1. How much code did loops save you?
+   - Without loops: Write 12 individual .col-1, .col-2, etc. classes
+   - With loops: One @for statement generates all 12
+
+2. How do maps make theming easier?
+   - Without maps: Hardcode colors everywhere
+   - With maps: Change the map, update all themes instantly
+
+3. When would you use @if vs @each vs @for?
+   - @if: Different styles based on conditions
+   - @each: Iterate over related data (themes, social networks)
+   - @for: Generate numbered classes (grid columns, spacing)
+
+4. How do built-in functions help with design consistency?
+   - Manual color variations: Guess hex codes
+   - Function variations: Mathematical relationships that always work
+
+5. Real-world impact:
+   - Design systems: One source of truth for all styling
+   - Maintenance: Change one variable, update entire site
+   - Team work: Designers can modify variables, developers handle logic
+
+This is how CSS frameworks like Bootstrap and Tailwind are built!
+*/
+
+/*# sourceMappingURL=exercises.css.map */

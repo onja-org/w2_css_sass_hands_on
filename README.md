@@ -18,15 +18,17 @@ SASS (Syntactically Awesome StyleSheets) is a **CSS preprocessor**. Think of it 
 ```
 Write SASS (.scss files) → Compile → Get CSS → Browser uses CSS
 ```
+"Compiling" just means the process of taking some input and transforming it into a different output.
 
 **Key Mental Model**: You write enhanced CSS (SASS), then a tool transforms it into regular CSS that browsers can understand. It's like having a translator that turns your "advanced CSS" into "basic CSS" that works everywhere.
 
 ### Why Use SASS?
 - **Variables**: Store colors, sizes, fonts in one place
-- **Nesting**: Write CSS that mirrors your HTML structure  
+- **Nesting**: Write CSS that mirrors your HTML structure
 - **Mixins**: Create reusable chunks of CSS
 - **Functions**: Calculate values dynamically
 - **Partials**: Split your CSS into organized files
+- **Modern module system**: Use `@use` instead of deprecated `@import`
 - **No browser compatibility issues**: Compiles to standard CSS
 
 ## 🚀 Setup
@@ -178,6 +180,17 @@ After completing this workshop, you'll understand:
 - The most important SASS features and when to use them
 
 **Next steps**: Try using SASS in your own projects! The workflow is always the same: write SASS, compile to CSS, use in HTML.
+
+---
+
+## 🆕 Modern SASS Syntax
+
+This workshop teaches both classic and modern SASS syntax:
+
+**Classic (exercises):** Uses `@import` for simplicity and learning
+**Modern (final project):** Uses `@use` and `color.adjust()` for current best practices
+
+You'll learn both approaches - the exercises use familiar syntax while the final project demonstrates professional, future-proof SASS!
 
 ---
 

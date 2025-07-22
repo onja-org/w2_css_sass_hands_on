@@ -1,7 +1,8 @@
 // Main file for all exercises
-// This imports all exercise files and compiles them into one CSS file
+// This uses modern @use syntax instead of deprecated @import
+// The "as *" makes all styles global (no namespace needed)
 
-@import 'exercises/01-variables-nesting';
-@import 'exercises/02-mixins-functions';
-@import 'exercises/03-partials-imports';
-@import 'exercises/04-advanced';
+@use 'exercises/01-variables-nesting' as *;
+@use 'exercises/02-mixins-functions' as *;
+@use 'exercises/03-partials-imports' as *;
+@use 'exercises/04-advanced' as *;

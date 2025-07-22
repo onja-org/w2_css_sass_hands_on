@@ -14,6 +14,9 @@
 // Remember: Import files WITHOUT the underscore and .scss extension
 // Example: @import 'partials/variables';
 
+// NOTE: @import is deprecated in favor of @use, but we're using it here for simplicity.
+// In the final project, you'll see the modern @use syntax!
+
 // Step 1: Foundation files (needed by others)
 // @import 'partials/variables';
 // @import 'partials/mixins';

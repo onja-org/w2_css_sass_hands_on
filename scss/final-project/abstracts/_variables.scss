@@ -30,6 +30,9 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $dark: #2c3e50;
 
+// Import color module for modern color functions
+@use 'sass:color';
+
 // Card theme colors (use with @each loops!)
 $card-themes: (
   premium: (
@@ -39,18 +42,18 @@ $card-themes: (
   ),
   featured: (
     primary: $primary,
-    secondary: lighten($primary, 40%),
-    accent: darken($primary, 15%)
+    secondary: color.adjust($primary, $lightness: 40%),
+    accent: color.adjust($primary, $lightness: -15%)
   ),
   new: (
     primary: #32cd32,
-    secondary: lighten(#32cd32, 40%),
-    accent: darken(#32cd32, 15%)
+    secondary: color.adjust(#32cd32, $lightness: 40%),
+    accent: color.adjust(#32cd32, $lightness: -15%)
   ),
   popular: (
     primary: #ff4500,
-    secondary: lighten(#ff4500, 40%),
-    accent: darken(#ff4500, 15%)
+    secondary: color.adjust(#ff4500, $lightness: 40%),
+    accent: color.adjust(#ff4500, $lightness: -15%)
   )
 );
 

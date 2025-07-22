@@ -1,6 +1,8 @@
 // Mixins - Reusable chunks of CSS that accept parameters
 // 🔧 Your toolkit for consistent, maintainable styles
 
+@use 'sass:color';
+
 // ==========================================
 // RESPONSIVE MIXINS
 // ==========================================
@@ -109,7 +111,7 @@
   background-color: $bg-color;
   color: $text-color;
   
-  $hover-color: if($hover-bg, $hover-bg, darken($bg-color, 10%));
+  $hover-color: if($hover-bg, $hover-bg, color.adjust($bg-color, $lightness: -10%));
   
   &:hover:not(:disabled) {
     background-color: $hover-color;

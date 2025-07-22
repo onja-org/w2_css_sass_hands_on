@@ -1,0 +1,116 @@
+// Functions - Pure calculations that return values
+// 🧮 Custom functions for dynamic value generation
+
+@use 'sass:color';
+@use 'sass:math';
+
+// ==========================================
+// COLOR FUNCTIONS
+// ==========================================
+
+// Modern way to lighten colors
+@function lighten-color($color, $amount) {
+  @return color.adjust($color, $lightness: $amount);
+}
+
+// Modern way to darken colors
+@function darken-color($color, $amount) {
+  @return color.adjust($color, $lightness: -$amount);
+}
+
+// Scale color lightness (more intuitive than adjust)
+@function scale-lightness($color, $percentage) {
+  @return color.scale($color, $lightness: $percentage);
+}
+
+// Mix two colors
+@function mix-colors($color1, $color2, $weight: 50%) {
+  @return color.mix($color1, $color2, $weight);
+}
+
+// ==========================================
+// RESPONSIVE FUNCTIONS
+// ==========================================
+
+// Calculate responsive font sizes
+@function fluid-size($min-size, $max-size, $min-screen: 320px, $max-screen: 1200px) {
+  $slope: math.div($max-size - $min-size, $max-screen - $min-screen);
+  $intersection: $min-size - ($slope * $min-screen);
+  
+  @return clamp(#{$min-size}, #{$intersection} + #{$slope * 100}vw, #{$max-size});
+}
+
+// Responsive spacing based on viewport
+@function responsive-space($base, $scale: 1.2) {
+  @return clamp(#{$base}, #{$base * 0.8} + 2vw, #{$base * $scale});
+}
+
+// ==========================================
+// LAYOUT FUNCTIONS
+// ==========================================
+
+// Convert pixels to rem
+@function px-to-rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+// Calculate grid column width
+@function grid-width($columns, $total: 12, $gap: 2rem) {
+  $column-width: math.div(100% - ($gap * ($total - 1)), $total);
+  @return ($column-width * $columns) + ($gap * ($columns - 1));
+}
+
+// ==========================================
+// UTILITY FUNCTIONS
+// ==========================================
+
+// Strip units from a number
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+// Get contrast color (black or white) for readability
+@function contrast-color($background) {
+  $lightness: color.lightness($background);
+  
+  @if $lightness > 50% {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Generate a random color (for prototyping)
+@function random-color() {
+  @return hsl(random(360), 70%, 50%);
+}
+
+/*
+💡 FUNCTION USAGE EXAMPLES:
+
+// Color functions
+.element {
+  background: lighten-color(#ff0000, 20%); // Lighter red
+  color: contrast-color(#ff0000); // White text for readability
+  border: 1px solid darken-color(#ff0000, 10%); // Darker red border
+}
+
+// Responsive functions
+.hero-title {
+  font-size: fluid-size(2rem, 4rem); // Scales between 2rem and 4rem
+}
+
+.container {
+  padding: responsive-space(1rem); // Responsive padding
+}
+
+// Layout functions
+.sidebar {
+  width: grid-width(3); // 3 columns out of 12
+}
+
+// Utility functions
+.card {
+  padding: px-to-rem(24px); // Convert 24px to rem
+}
+*/
