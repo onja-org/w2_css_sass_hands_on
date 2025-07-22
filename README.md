@@ -183,15 +183,4 @@ After completing this workshop, you'll understand:
 
 ---
 
-## 🆕 Modern SASS Syntax
-
-This workshop teaches both classic and modern SASS syntax:
-
-**Classic (exercises):** Uses `@import` for simplicity and learning
-**Modern (final project):** Uses `@use` and `color.adjust()` for current best practices
-
-You'll learn both approaches - the exercises use familiar syntax while the final project demonstrates professional, future-proof SASS!
-
----
-
 Ready to get started? Run `npm install` and `npm run dev`, then dive into Exercise 1! 🚀
