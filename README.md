@@ -114,7 +114,7 @@ Work through these exercises in order. Each builds on the previous one!
 
 ---
 
-## 🎪 Final Project: Candy Expo Website
+## 🎪 Bonus Final Project: Candy Expo Website (Stretch goal if time permits)
 
 **Goal**: Build a complete candy exposition website using all SASS features!
 
