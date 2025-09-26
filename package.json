@@ -4,10 +4,10 @@
   "description": "A hands-on workshop for learning SASS through building a candy expo website",
   "main": "index.js",
   "scripts": {
-    "build": "sass --watch scss:css --style=expanded",
-    "build-once": "sass scss:css --style=expanded",
-    "dev": "sass --watch scss:css --style=expanded",
-    "clean": "rm -rf css/"
+    "build": "sass --watch lab/scss:lab/css --style=expanded",
+    "build-once": "sass lab/scss:lab/css --style=expanded",
+    "dev": "sass --watch lab/scss:lab/css --style=expanded",
+    "clean": "rm -rf lab/css/"
   },
   "keywords": ["sass", "css", "workshop", "learning"],
   "author": "",

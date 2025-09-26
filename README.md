@@ -13,57 +13,56 @@ This is a comprehensive hands-on SASS (Syntactically Awesome StyleSheets) worksh
 ## Project Structure
 
 ```
-/lab/                           # Main workshop directory
-├── package.json               # Project dependencies and build scripts
-├── README.md                  # Detailed workshop instructions
+/                               # Root directory
+├── package.json               # Project dependencies and build scripts  
+├── README.md                  # Project overview
 ├── .gitignore                 # Git ignore rules
 │
-├── exercises/                 # Step-by-step learning exercises (HTML files)
-│   ├── 01-variables-nesting.html
-│   ├── 02-mixins-functions.html
-│   ├── 03-partials-imports.html
-│   └── 04-advanced.html
-│
-├── final-project/             # Complete candy expo website
-│   └── index.html            # Main project HTML
-│
-└── scss/                     # SASS source files
-    ├── exercises.scss        # Main exercise stylesheet
-    ├── final-project.scss    # Main project stylesheet
-    ├── exercises/            # Exercise-specific SASS files
-    │   ├── _01-variables-nesting.scss
-    │   ├── _02-mixins-functions.scss
-    │   ├── _03-partials-imports.scss
-    │   ├── _04-advanced.scss
-    │   └── partials/         # Shared components
-    │       ├── _buttons.scss
-    │       ├── _mixins.scss
-    │       └── _variables.scss
-    └── final-project/        # Project SASS architecture
-        └── abstracts/        # Variables, mixins, functions
-            ├── _functions.scss
-            ├── _mixins.scss
-            └── _variables.scss
+└── lab/                       # Main workshop directory
+    ├── README.md              # Detailed workshop instructions
+    │
+    ├── exercises/             # Step-by-step learning exercises (HTML files)
+    │   ├── 01-variables-nesting.html
+    │   ├── 02-mixins-functions.html
+    │   ├── 03-partials-imports.html
+    │   └── 04-advanced.html
+    │
+    ├── final-project/         # Complete candy expo website
+    │   └── index.html        # Main project HTML
+    │
+    └── scss/                 # SASS source files
+        ├── exercises.scss    # Main exercise stylesheet
+        ├── final-project.scss # Main project stylesheet
+        ├── exercises/        # Exercise-specific SASS files
+        │   ├── _01-variables-nesting.scss
+        │   ├── _02-mixins-functions.scss
+        │   ├── _03-partials-imports.scss
+        │   ├── _04-advanced.scss
+        │   └── partials/     # Shared components
+        │       ├── _buttons.scss
+        │       ├── _mixins.scss
+        │       └── _variables.scss
+        └── final-project/    # Project SASS architecture
+            └── abstracts/    # Variables, mixins, functions
+                ├── _functions.scss
+                ├── _mixins.scss
+                └── _variables.scss
 ```
 
 ## Quick Start
 
-1. **Navigate to the lab directory:**
-   ```bash
-   cd lab
-   ```
-
-2. **Install dependencies:**
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Start development mode:**
+2. **Start development mode:**
    ```bash
    npm run dev
    ```
 
-4. **Open exercises in browser and start coding!**
+3. **Open exercises in browser and start coding!**
+   Navigate to `lab/exercises/` and open the HTML files in your browser.
 
 ## Workshop Progression
 

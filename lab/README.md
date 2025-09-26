@@ -37,6 +37,7 @@ Write SASS (.scss files) → Compile → Get CSS → Browser uses CSS
    ```bash
    npm install
    ```
+   Run this from the project root directory (where `package.json` is located).
 
 2. **Start the build process** (this watches for changes and auto-compiles):
    ```bash
@@ -45,10 +46,10 @@ Write SASS (.scss files) → Compile → Get CSS → Browser uses CSS
    Keep this running in a terminal while you work!
 
 3. **Understanding the file structure**:
-   - `scss/` - Your SASS source files (this is where you write code)
-   - `css/` - Compiled CSS files (auto-generated, don't edit these!)
-   - `exercises/` - Step-by-step learning exercises
-   - `final-project/` - Your candy expo website
+   - `lab/scss/` - Your SASS source files (this is where you write code)
+   - `lab/css/` - Compiled CSS files (auto-generated, don't edit these!)
+   - `lab/exercises/` - Step-by-step learning exercises
+   - `lab/final-project/` - Your candy expo website
 
 ## 📚 Exercises
 
@@ -58,8 +59,8 @@ Work through these exercises in order. Each builds on the previous one!
 **Goal**: Learn SASS variables and nesting syntax
 
 **What you'll do**:
-1. Open `exercises/01-variables-nesting.html` in your browser
-2. Edit `scss/exercises/_01-variables-nesting.scss`
+1. Open `lab/exercises/01-variables-nesting.html` in your browser
+2. Edit `lab/scss/exercises/_01-variables-nesting.scss`
 3. Create variables for candy colors and use nesting for card layouts
 
 **Key concepts**:
@@ -73,8 +74,8 @@ Work through these exercises in order. Each builds on the previous one!
 **Goal**: Create reusable code chunks and calculations
 
 **What you'll do**:
-1. Open `exercises/02-mixins-functions.html`
-2. Edit `scss/exercises/_02-mixins-functions.scss`
+1. Open `lab/exercises/02-mixins-functions.html`
+2. Edit `lab/scss/exercises/_02-mixins-functions.scss`
 3. Create mixins for button styles and functions for responsive sizing
 
 **Key concepts**:
@@ -88,8 +89,8 @@ Work through these exercises in order. Each builds on the previous one!
 **Goal**: Organize code into logical files
 
 **What you'll do**:
-1. Open `exercises/03-partials-imports.html`
-2. Split your SASS into multiple files in `scss/exercises/partials/`
+1. Open `lab/exercises/03-partials-imports.html`
+2. Split your SASS into multiple files in `lab/scss/exercises/partials/`
 3. Use `@import` to combine them
 
 **Key concepts**:
@@ -103,8 +104,8 @@ Work through these exercises in order. Each builds on the previous one!
 **Goal**: Use control structures and built-in functions
 
 **What you'll do**:
-1. Open `exercises/04-advanced.html`
-2. Edit `scss/exercises/_04-advanced.scss`
+1. Open `lab/exercises/04-advanced.html`
+2. Edit `lab/scss/exercises/_04-advanced.scss`
 3. Use loops to generate utility classes and conditionals for themes
 
 **Key concepts**:
@@ -126,8 +127,8 @@ Work through these exercises in order. Each builds on the previous one!
 - Responsive navigation
 
 **Your mission**:
-1. Open `final-project/index.html`
-2. Create a well-organized SASS architecture in `scss/final-project/`
+1. Open `lab/final-project/index.html`
+2. Create a well-organized SASS architecture in `lab/scss/final-project/`
 3. Use variables for your color palette and typography
 4. Create mixins for buttons, cards, and layouts
 5. Organize with partials (base, layout, components, pages)
@@ -135,7 +136,7 @@ Work through these exercises in order. Each builds on the previous one!
 
 **SASS Architecture Example**:
 ```
-scss/final-project/
+lab/scss/final-project/
 ├── main.scss           # Imports everything
 ├── abstracts/
 │   ├── _variables.scss # Colors, fonts, sizes
@@ -166,7 +167,7 @@ scss/final-project/
 ## 💡 Tips for Success
 
 1. **Keep `npm run dev` running** - It auto-compiles your SASS as you save
-2. **Check the CSS output** - Look in the `css/` folder to see what your SASS becomes
+2. **Check the CSS output** - Look in the `lab/css/` folder to see what your SASS becomes
 3. **Use your browser's dev tools** - Inspect elements to see the compiled CSS
 4. **Start simple** - Don't try to use every feature at once
 5. **Organize early** - Use partials from the beginning, even for small projects

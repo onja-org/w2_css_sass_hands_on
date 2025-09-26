@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/*
+💡 PRO TIPS FOR USING THESE VARIABLES:
+
+1. Use semantic names, not descriptive ones:
+   ✅ $primary, $danger
+   ❌ $red, $blue
+
+2. Create consistent scales:
+   ✅ $spacing-4, $spacing-8, $spacing-12 (multiples of 4)
+   ❌ $spacing-7, $spacing-13 (random numbers)
+
+3. Group related variables:
+   ✅ All colors together, all spacing together
+   ❌ Mixed throughout the file
+
+4. Use maps for complex data:
+   ✅ $card-themes: (premium: (...), featured: (...))
+   ❌ $premium-primary, $premium-secondary, $featured-primary...
+
+5. Follow your design system:
+   These values should match your design tool (Figma, Sketch, etc.)
+*/
+/*
+💡 FUNCTION USAGE EXAMPLES:
+
+// Color functions
+.element {
+  background: lighten-color(#ff0000, 20%); // Lighter red
+  color: contrast-color(#ff0000); // White text for readability
+  border: 1px solid darken-color(#ff0000, 10%); // Darker red border
+}
+
+// Responsive functions
+.hero-title {
+  font-size: fluid-size(2rem, 4rem); // Scales between 2rem and 4rem
+}
+
+.container {
+  padding: responsive-space(1rem); // Responsive padding
+}
+
+// Layout functions
+.sidebar {
+  width: grid-width(3); // 3 columns out of 12
+}
+
+// Utility functions
+.card {
+  padding: px-to-rem(24px); // Convert 24px to rem
+}
+*/
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+/*
+💡 MIXIN USAGE TIPS:
+
+1. Keep mixins focused:
+   ✅ One responsibility per mixin
+   ❌ Giant mixins that do everything
+
+2. Use parameters for flexibility:
+   ✅ @mixin btn-variant($bg, $text, $hover)
+   ❌ Separate mixins for every color
+
+3. Provide sensible defaults:
+   ✅ @mixin card($padding: $card-padding)
+   ❌ Always requiring all parameters
+
+4. Use @content for flexible mixins:
+   ✅ Responsive mixins that accept any CSS
+   ❌ Fixed mixins that can't be customized
+
+5. Document complex mixins:
+   Include usage examples in comments!
+*/
+/*
+Create a professional SASS architecture by building these files:
+
+ABSTRACTS (Foundation - no CSS output):
+├── _variables.scss    - Colors, fonts, spacing, breakpoints
+├── _functions.scss    - Custom functions for calculations
+└── _mixins.scss      - Reusable mixins for buttons, cards, etc.
+
+BASE (Global styles):
+├── _reset.scss       - CSS reset/normalize
+└── _typography.scss  - Font styles, headings, body text
+
+LAYOUT (Major sections):
+├── _grid.scss        - Container and grid system
+├── _header.scss      - Navigation and header
+└── _footer.scss      - Footer styles
+
+COMPONENTS (Reusable UI):
+├── _buttons.scss     - All button variations
+├── _cards.scss       - Exhibit cards, vendor cards, ticket cards
+└── _forms.scss       - Newsletter form, inputs
+
+PAGES (Page-specific):
+└── _home.scss        - Hero section, exhibits, vendors, schedule
+
+FEATURES TO IMPLEMENT:
+✅ Variables for consistent design tokens
+✅ Mixins for reusable button and card styles
+✅ Functions for responsive calculations
+✅ @for loops for utility classes and grid system
+✅ @each loops for theme variations (card types)
+✅ @if/@else for conditional styling (card badges)
+✅ Built-in functions (color.adjust, mix)
+✅ Proper nesting that mirrors HTML structure
+✅ Responsive design with mobile-first approach
+✅ Well-organized partials for maintainability
+
+BONUS CHALLENGES:
+🌟 Create a color theme system using maps
+🌟 Generate utility classes with loops
+🌟 Build a responsive grid system
+🌟 Use advanced mixins with @content blocks
+🌟 Implement smooth animations and transitions
+🌟 Create hover effects with color functions
+
+Remember: This should demonstrate PROFESSIONAL SASS organization!
+*/
+
+/*# sourceMappingURL=final-project.css.map */
