@@ -51,6 +51,11 @@ Write SASS (.scss files) → Compile → Get CSS → Browser uses CSS
    - `lab/exercises/` - Step-by-step learning exercises
    - `lab/final-project/` - Your candy expo website
 
+4. **Running test** (View testing checklist)
+   ```bash
+   npm test
+   ```
+
 ## 📚 Exercises
 
 Work through these exercises in order. Each builds on the previous one!
@@ -163,6 +168,7 @@ lab/scss/final-project/
 - `npm run dev` - Watch for changes and auto-compile (use while coding)
 - `npm run build-once` - Compile once and stop
 - `npm run clean` - Delete compiled CSS files
+- `npm test` - Run Jest tests to verify your SASS exercises and ensure each step meets the project goals.
 
 ## 💡 Tips for Success
 
